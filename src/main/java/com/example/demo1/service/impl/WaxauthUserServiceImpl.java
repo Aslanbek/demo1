@@ -60,6 +60,8 @@ public class WaxauthUserServiceImpl implements WaxauthUserService {
 
     @Override
     public List<WaxAuthUserModel> getAll() {
+        List<WaxauthUser> waxauthUserList = (List<WaxauthUser>) waxauthUserRepository.findAll();
+        List<WaxAuthUserModel> userModelList =
         return null;
     }
 }

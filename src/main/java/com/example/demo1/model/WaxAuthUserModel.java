@@ -3,7 +3,7 @@ package com.example.demo1.model;
 import com.example.demo1.entity.WaxauthUser;
 
 /**
- * model for entity
+ * model for entity @class
  */
 public class WaxAuthUserModel extends BaseModel {
     private String name;
