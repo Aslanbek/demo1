@@ -6,5 +6,6 @@ import org.springframework.data.repository.CrudRepository;
 /**
  * my repo class
  */
-public interface WaxAuthUserAttrsRepository extends CrudRepository<WaxauthUserattrs, Long> {
+public interface UserAttrsRepo extends CrudRepository<WaxauthUserattrs, Long> {
+
 }

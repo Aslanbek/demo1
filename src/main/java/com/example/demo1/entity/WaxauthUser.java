@@ -39,7 +39,7 @@ public class WaxauthUser extends BaseEntity {
     /**
      * user attrs
      */
-    private List<WaxauthUserattrs> waxauthUserattrsList;
+    private List<WaxauthUserattrs> userAttrs;
 
     /**
      * def constructor
@@ -52,17 +52,17 @@ public class WaxauthUser extends BaseEntity {
      *
      * @return attrs of user
      */
-    @OneToMany(mappedBy = "waxauthUser")
-    public List<WaxauthUserattrs> getWaxauthUserattrsList() {
-        return waxauthUserattrsList;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
+    public List<WaxauthUserattrs> getUserAttrs() {
+        return userAttrs;
     }
 
     /**
      * descrion
      *
-     * @param waxauthUserattrsList list of attrs
+     * @param userAttrs list of attrs
      */
-    public void setWaxauthUserattrsList(List<WaxauthUserattrs> waxauthUserattrsList) {
-        this.waxauthUserattrsList = waxauthUserattrsList;
+    public void setUserAttrs(List<WaxauthUserattrs> userAttrs) {
+        this.userAttrs = userAttrs;
     }
 }

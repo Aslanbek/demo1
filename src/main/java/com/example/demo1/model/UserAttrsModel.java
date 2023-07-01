@@ -5,34 +5,35 @@ import com.example.demo1.entity.WaxauthUserattrs;
 /**
  * class model for entity WaxauthUserattrs
  */
-public class WaxAuthUserAttrsModel extends BaseModel {
+public class UserAttrsModel extends BaseModel {
     private String name;
     private String value;
 
-    private WaxAuthUserModel userModel;
+    private UserModel userModel;
 
     /**
      * default empty constr for class
      */
-    public WaxAuthUserAttrsModel() {
+    public UserAttrsModel() {
     }
 
     /**
      * entity to model
+     *
      * @param entity WaxauthUserattrs
      * @return model WaxAuthUserAttrsModel
      */
-    public static WaxAuthUserAttrsModel toModel(WaxauthUserattrs entity) {
-        WaxAuthUserAttrsModel model = new WaxAuthUserAttrsModel();
+    public static UserAttrsModel toModel(WaxauthUserattrs entity) {
+        UserAttrsModel model = new UserAttrsModel();
         model.setId(entity.getId());
         model.setName(entity.getName());
-        model.value = entity.getName();
-        model.setUserModel(WaxAuthUserModel.toModel(entity.getWaxauthUser()));
+        model.setValue(entity.getValue());
         return model;
     }
 
     /**
      * set
+     *
      * @param name of attr
      */
     public void setName(String name) {
@@ -41,6 +42,7 @@ public class WaxAuthUserAttrsModel extends BaseModel {
 
     /**
      * set
+     *
      * @param value of WaxAuthUserAttrsModel
      */
     public void setValue(String value) {
@@ -49,9 +51,10 @@ public class WaxAuthUserAttrsModel extends BaseModel {
 
     /**
      * set
+     *
      * @param userModel own of attrs
      */
-    public void setUserModel(WaxAuthUserModel userModel) {
+    public void setUserModel(UserModel userModel) {
         this.userModel = userModel;
     }
 }

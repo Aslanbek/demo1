@@ -16,7 +16,7 @@ import lombok.ToString;
 public class WaxauthUserattrs extends BaseEntity {
 
     private String name;
-    private WaxauthUser waxauthUser;
+    private WaxauthUser user;
 
     private String value;
 
@@ -33,8 +33,8 @@ public class WaxauthUserattrs extends BaseEntity {
      */
     @ManyToOne
     @JoinColumn(name = "user_id", referencedColumnName = "id", foreignKey = @ForeignKey(name = "fk_waxauth_user_id"))
-    public WaxauthUser getWaxauthUser() {
-        return waxauthUser;
+    public WaxauthUser getUser() {
+        return user;
     }
 
     /**
@@ -42,8 +42,8 @@ public class WaxauthUserattrs extends BaseEntity {
      *
      * @param waxauthUser entity user
      */
-    public void setWaxauthUser(WaxauthUser waxauthUser) {
-        this.waxauthUser = waxauthUser;
+    public void setUser(WaxauthUser waxauthUser) {
+        this.user = waxauthUser;
     }
 
 }

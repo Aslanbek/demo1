@@ -8,11 +8,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * this is comment for class
  */
 @SpringBootApplication
-public class Demo1Application {
+public class GgdDemoApp {
     /**
      * this is comment for constructor of class
      */
-    public Demo1Application() {
+    public GgdDemoApp() {
     }
 
     /**
@@ -21,7 +21,7 @@ public class Demo1Application {
      * @param args this description of parameter
      */
     public static void main(String[] args) {
-        SpringApplication.run(Demo1Application.class, args);
+        SpringApplication.run(GgdDemoApp.class, args);
     }
 
 }
