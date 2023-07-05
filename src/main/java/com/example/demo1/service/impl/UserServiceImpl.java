@@ -30,6 +30,7 @@ public class UserServiceImpl implements UserService {
      * def constr
      */
     public UserServiceImpl() {
+
     }
 
     @Override
@@ -51,12 +52,12 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void update(WaxauthUser waxauthUser) {
-
+        userRepo.save(waxauthUser);
     }
 
     @Override
     public void delete(Long id) {
-
+        userRepo.deleteById(id);
     }
 
     @Override
