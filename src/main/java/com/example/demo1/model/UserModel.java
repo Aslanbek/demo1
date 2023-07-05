@@ -3,9 +3,9 @@ package com.example.demo1.model;
 import com.example.demo1.entity.WaxauthUser;
 
 /**
- * model for entity
+ * model for entity @class
  */
-public class WaxAuthUserModel extends BaseModel {
+public class UserModel extends BaseModel {
     private String name;
     private String fullname;
     private boolean locked;
@@ -16,8 +16,8 @@ public class WaxAuthUserModel extends BaseModel {
      * @param entity my entity
      * @return my model
      */
-    public static WaxAuthUserModel toModel(WaxauthUser entity) {
-        WaxAuthUserModel model = new WaxAuthUserModel();
+    public static UserModel toModel(WaxauthUser entity) {
+        UserModel model = new UserModel();
         model.setId(entity.getId());
         model.setName(entity.getName());
         model.setFullname(entity.getFullname());
@@ -28,7 +28,7 @@ public class WaxAuthUserModel extends BaseModel {
     /**
      * def constr
      */
-    public WaxAuthUserModel() {
+    public UserModel() {
 
     }
 

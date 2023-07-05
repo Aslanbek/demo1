@@ -3,14 +3,14 @@ package com.example.demo1.service;
 import com.example.demo1.entity.WaxauthUser;
 import com.example.demo1.exception.UserAlreadyExistException;
 import com.example.demo1.exception.UserNotFoundException;
-import com.example.demo1.model.WaxAuthUserModel;
+import com.example.demo1.model.UserModel;
 
 import java.util.List;
 
 /**
  * description for class
  */
-public interface WaxauthUserService {
+public interface UserService {
     /**
      * desciption
      *
@@ -18,7 +18,7 @@ public interface WaxauthUserService {
      * @return entity or error
      * @throws UserAlreadyExistException yes this is error
      */
-    WaxAuthUserModel registration(WaxauthUser waxauthUser) throws UserAlreadyExistException;
+    UserModel registration(WaxauthUser waxauthUser) throws UserAlreadyExistException;
 
     /**
      * descr
@@ -26,7 +26,7 @@ public interface WaxauthUserService {
      * @return my return
      * @throws UserNotFoundException my exception
      */
-    WaxAuthUserModel getById(Long id) throws UserNotFoundException;
+    UserModel getById(Long id) throws UserNotFoundException;
 
     /**
      * save my user
@@ -47,5 +47,5 @@ public interface WaxauthUserService {
      *
      * @return list of users
      */
-    List<WaxAuthUserModel> getAll();
+    List<UserModel> getAll();
 }
