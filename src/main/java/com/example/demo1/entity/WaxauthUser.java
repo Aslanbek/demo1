@@ -1,10 +1,6 @@
 package com.example.demo1.entity;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
-
 import java.util.List;
 
 /**
@@ -12,9 +8,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "Waxauth_User")
-@Getter
-@Setter
-@ToString
+
 public class WaxauthUser extends BaseEntity {
     /**
      * name
@@ -64,5 +58,37 @@ public class WaxauthUser extends BaseEntity {
      */
     public void setUserAttrs(List<WaxauthUserattrs> userAttrs) {
         this.userAttrs = userAttrs;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getPasswd() {
+        return passwd;
+    }
+
+    public void setPasswd(String passwd) {
+        this.passwd = passwd;
+    }
+
+    public String getFullname() {
+        return fullname;
+    }
+
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
+    }
+
+    public boolean isLocked() {
+        return locked;
+    }
+
+    public void setLocked(boolean locked) {
+        this.locked = locked;
     }
 }

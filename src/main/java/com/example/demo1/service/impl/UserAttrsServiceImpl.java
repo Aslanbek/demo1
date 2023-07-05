@@ -22,14 +22,9 @@ public class UserAttrsServiceImpl implements UserAttrsService {
 
     @Override
     public WaxauthUserattrs createAttr(WaxauthUserattrs userAttrs, Long userId) throws Exception {
-        Optional<WaxauthUser> userOptional = userRepo.findById(userId);
-        if (userOptional.isEmpty()) {
-            throw new Exception("user not found on create attrs");
-        } else {
-            userAttrs.setUser(userOptional.get());
-        }
-        WaxauthUserattrs newAttr = attrsRepo.save(userAttrs);
-        return newAttr;
+        WaxauthUser user = userRepo.findById(userId).get();
+        userAttrs.setUser(user);
+        return attrsRepo.save(userAttrs);
     }
 
     @Override

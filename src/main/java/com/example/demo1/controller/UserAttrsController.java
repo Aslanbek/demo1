@@ -21,8 +21,7 @@ public class UserAttrsController {
     @PostMapping
     public ResponseEntity createAttr(@RequestBody WaxauthUserattrs waxauthUserattrs, @RequestParam Long userId) {
         try {
-            WaxauthUserattrs newAttr = attrsService.createAttr(waxauthUserattrs, userId);
-            return ResponseEntity.ok(newAttr);
+            return ResponseEntity.ok(attrsService.createAttr(waxauthUserattrs, userId));
         } catch (Exception e) {
             return ResponseEntity.badRequest().body("error on createAttr");
         }
